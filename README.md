@@ -2,6 +2,10 @@
 
 医学論文執筆・学会発表のための学術英語教材（Web App）
 
+**Author:**
+Shunichiro Nakao, MD, MSc, PhD
+Department of Traumatology and Acute Critical Medicine, The University of Osaka
+
 ## Overview
 
 医学研究者・臨床医が学術英語を体系的に学ぶためのインタラクティブなウェブ教材です。論文執筆（IMRaD形式）から学会発表、救急医のプレゼンテーションまで幅広くカバーしています。
@@ -66,6 +70,10 @@ academic-english/
 - 本教材のフレーズ・例文はすべてオリジナルに作成した汎用的な学術定型表現です
 - 症例・データはすべて架空であり、実在の患者情報は含まれていません
 - 本教材は言語学習を目的としており、臨床判断の根拠として使用しないでください
+
+## AI Assistance
+
+本教材の作成にあたり、生成AI（Claude, Anthropic）を活用しました。
 
 ## Contributing
 

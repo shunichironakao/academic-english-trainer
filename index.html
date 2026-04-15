@@ -461,11 +461,16 @@
     <header>
         <h1>Medical Academic English</h1>
         <p>医学論文執筆・学会発表のための学術英語教材</p>
+        <p style="font-size:0.8rem; opacity:0.75; margin-top:0.5rem;">
+            Shunichiro Nakao, MD, MSc, PhD<br>
+            Department of Traumatology and Acute Critical Medicine, The University of Osaka
+        </p>
     </header>
 
     <div class="nav-container">
         <div class="nav-tabs">
-            <div class="nav-tab active" data-section="writing">論文執筆 Writing</div>
+            <div class="nav-tab active" data-section="basics">英文の基本 Basics</div>
+            <div class="nav-tab" data-section="writing">論文執筆 Writing</div>
             <div class="nav-tab" data-section="presentation">学会発表 Presentation</div>
             <div class="nav-tab" data-section="grammar">学術文法 Grammar</div>
             <div class="nav-tab" data-section="vocabulary">専門語彙 Vocabulary</div>
@@ -474,6 +479,561 @@
     </div>
 
     <main>
+        <!-- ==================== BASICS SECTION ==================== -->
+        <div id="basics" class="section active">
+            <div class="section-header">
+                <h2>英文の基本 — Academic Writing Basics</h2>
+                <p>英語で学術的な文章を書くための基礎的な作法を学びます</p>
+            </div>
+
+            <div class="sub-nav" id="basics-subnav">
+                <button class="sub-nav-btn active" data-sub="b-paragraph">パラグラフ構成</button>
+                <button class="sub-nav-btn" data-sub="b-sentence">文の組み立て</button>
+                <button class="sub-nav-btn" data-sub="b-concise">簡潔さ</button>
+                <button class="sub-nav-btn" data-sub="b-vocab">語彙の選択</button>
+                <button class="sub-nav-btn" data-sub="b-abbreviation">略語のルール</button>
+                <button class="sub-nav-btn" data-sub="b-number">数字・単位</button>
+            </div>
+
+            <!-- Paragraph Structure -->
+            <div id="b-paragraph" class="sub-section active">
+                <div class="tip-box">
+                    <strong>日本語との違い:</strong> 日本の教育では英語の「読み・文法」が中心で、パラグラフ単位で文章を構成するトレーニングを受ける機会は限られています。英語の学術文章は、パラグラフを構造の基本単位として組み立てるルールが明確に存在します。
+                </div>
+
+                <div class="card">
+                    <h3>パラグラフの基本原則 — One Paragraph, One Idea</h3>
+                    <p style="font-size:0.9rem; color:var(--text); margin-bottom:1rem;">
+                        英語の学術文章における最も重要なルールは<strong>「1パラグラフにつき1つの主張（one idea）」</strong>です。各パラグラフは以下の構造を持ちます（Swales & Feak, 2012; Williams & Bizup, 2017）。
+                    </p>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>構成要素</th>
+                            <th>役割</th>
+                            <th>例</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Topic sentence</strong></td>
+                            <td>パラグラフの主張を1文で述べる（通常は最初の文）</td>
+                            <td>Early mobilization has been shown to reduce ICU length of stay.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Supporting sentences</strong></td>
+                            <td>根拠・データ・例示で主張を支持する</td>
+                            <td>A randomized trial by Smith et al. demonstrated that... Furthermore, a meta-analysis reported...</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Concluding sentence</strong></td>
+                            <td>要約、次のパラグラフへの橋渡し</td>
+                            <td>These findings support the implementation of early mobilization protocols in the ICU setting.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>よくある問題点</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>問題</th>
+                            <th>説明</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">1パラグラフに複数のトピック</td>
+                            <td>話題が変わったら新しいパラグラフを始める。読み手はパラグラフの最初の文でトピックを判断するため、途中でトピックが変わると混乱する</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">Topic sentenceがない</td>
+                            <td>いきなり詳細から入ると、読み手はそのパラグラフの目的がわからない。最初の1文で「このパラグラフは何について述べるか」を明示する</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">パラグラフが1〜2文しかない</td>
+                            <td>学術文章では十分な根拠を示す必要があるため、極端に短いパラグラフは未展開の印象を与える（ただしAbstractやResultsでは許容される場合もある）</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">パラグラフが長すぎる（1ページ以上）</td>
+                            <td>複数のideaが混在している可能性が高い。分割を検討する</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>パラグラフ間のつながり — Cohesion & Coherence</h3>
+                    <p style="font-size:0.9rem; color:var(--text); margin-bottom:0.8rem;">
+                        各パラグラフは独立しつつも、論文全体として論理的に流れる必要があります（Halliday & Hasan, 1976）。
+                    </p>
+                    <div class="phrase-item">
+                        <div class="phrase-en"><strong>Known → New の原則:</strong> 各文は、前の文で既に述べた情報（known/given information）から始め、新しい情報（new information）を文末に置く。</div>
+                        <div class="phrase-ja">読み手が「既知→未知」の順で情報を受け取ると理解しやすくなります。</div>
+                    </div>
+                    <div class="phrase-item">
+                        <div class="phrase-en"><strong>Transition signals:</strong> パラグラフ間の関係を明示する接続表現を使う。</div>
+                        <div class="phrase-ja">However（対比）、Furthermore（追加）、Therefore（因果）など。「専門語彙」タブの「接続表現」も参照してください。</div>
+                    </div>
+                    <div class="phrase-item">
+                        <div class="phrase-en"><strong>Repetition of key terms:</strong> 同じ概念には一貫して同じ用語を使う。同義語で言い換えすぎると混乱を招く。</div>
+                        <div class="phrase-ja">例：「mortality」を文によって「death rate」「fatality」と変えると、読み手は異なる概念かと誤解する可能性があります。</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>IMRaDにおけるパラグラフの役割</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>セクション</th>
+                            <th>各パラグラフの典型的な役割</th>
+                        </tr>
+                        <tr>
+                            <td>Introduction</td>
+                            <td>P1: 疾患の一般的な背景 → P2: 先行研究 → P3: 研究のgap → P4: 本研究の目的</td>
+                        </tr>
+                        <tr>
+                            <td>Methods</td>
+                            <td>P1: 研究デザイン・倫理 → P2: 対象・選択基準 → P3: 介入/データ収集 → P4: 統計解析</td>
+                        </tr>
+                        <tr>
+                            <td>Results</td>
+                            <td>P1: 患者背景 → P2: 主要評価項目 → P3: 副次評価項目 → P4: サブグループ解析</td>
+                        </tr>
+                        <tr>
+                            <td>Discussion</td>
+                            <td>P1: 主要な結果の要約 → P2-3: 先行研究との比較 → P4: メカニズムの考察 → P5: Limitations → P6: 結論</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Sentence Structure -->
+            <div id="b-sentence" class="sub-section" style="display:none;">
+                <div class="card">
+                    <h3>文の基本構造 — Subject + Verb を明確に</h3>
+                    <p style="font-size:0.9rem; color:var(--text); margin-bottom:1rem;">
+                        英語の学術文では、主語と動詞を早い段階で提示することが最も重要です。主語と動詞が離れすぎると、読み手に負荷がかかります（Williams & Bizup, <em>Style: Lessons in Clarity and Grace</em>, 13th ed., 2017）。
+                    </p>
+                    <table class="comparison-table">
+                        <tr>
+                            <th class="avoid">主語と動詞が離れている（避ける）</th>
+                            <th class="prefer">主語と動詞が近い（おすすめ）</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">The patients who were admitted to the ICU between January 2020 and December 2023 and who met our inclusion criteria <strong>were</strong> enrolled.</td>
+                            <td class="prefer">We enrolled patients who were admitted to the ICU between January 2020 and December 2023 and who met our inclusion criteria.</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">The effect of the intervention on mortality in patients with septic shock who were treated with vasopressors <strong>was</strong> significant.</td>
+                            <td class="prefer">The intervention significantly reduced mortality in patients with septic shock who were treated with vasopressors.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>1文の長さ</h3>
+                    <div class="tip-box">
+                        <strong>目安:</strong> 学術文でも1文は20〜30語程度がおすすめです。40語を超える文は分割を検討しましょう（AMA Manual of Style, 11th ed.）。ただし、短すぎる文の連続もぶつ切りの印象になるため、長短を混ぜるのが自然です。
+                    </div>
+                    <table class="comparison-table">
+                        <tr>
+                            <th class="avoid">長すぎる文（避ける）</th>
+                            <th class="prefer">分割した文（おすすめ）</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">We found that patients who received early antibiotics within one hour of presentation had significantly lower mortality compared with those who received antibiotics after one hour, and this finding was consistent across all prespecified subgroups including age, sex, and severity of illness. (45語)</td>
+                            <td class="prefer">Patients who received early antibiotics within one hour of presentation had significantly lower mortality than those who received delayed antibiotics. This finding was consistent across all prespecified subgroups, including age, sex, and severity of illness. (23語 + 18語)</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>主語の選び方 — 動作の主体を明確に</h3>
+                    <p style="font-size:0.9rem; color:var(--text); margin-bottom:0.8rem;">
+                        抽象名詞を主語にすると文が不明確になりがちです（いわゆる nominalization の問題）。動作の主体を主語にする方が明快です。
+                    </p>
+                    <table class="comparison-table">
+                        <tr>
+                            <th class="avoid">名詞化が多い（避ける）</th>
+                            <th class="prefer">動作主体が明確（おすすめ）</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">The <strong>administration</strong> of antibiotics to the patients <strong>was performed</strong>...</td>
+                            <td class="prefer">We <strong>administered</strong> antibiotics to the patients...</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">An <strong>investigation</strong> of the relationship was <strong>conducted</strong>.</td>
+                            <td class="prefer">We <strong>investigated</strong> the relationship.</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">There was an <strong>improvement</strong> in survival.</td>
+                            <td class="prefer">Survival <strong>improved</strong>.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>並列構造 — Parallel Structure</h3>
+                    <p style="font-size:0.9rem; color:var(--text); margin-bottom:0.8rem;">
+                        列挙する要素は文法的に同じ形式で揃えます。これは英語ライティングの基本ルールです。
+                    </p>
+                    <table class="comparison-table">
+                        <tr>
+                            <th class="avoid">不揃い（避ける）</th>
+                            <th class="prefer">揃っている（おすすめ）</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">The study aimed to <strong>assess</strong> mortality, <strong>evaluating</strong> morbidity, and <strong>the measurement of</strong> length of stay.</td>
+                            <td class="prefer">The study aimed to <strong>assess</strong> mortality, <strong>evaluate</strong> morbidity, and <strong>measure</strong> length of stay.</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">Patients were excluded if they <strong>had cancer</strong>, <strong>pregnancy</strong>, or <strong>were under 18</strong>.</td>
+                            <td class="prefer">Patients were excluded if they <strong>had cancer</strong>, <strong>were pregnant</strong>, or <strong>were under 18 years of age</strong>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Conciseness -->
+            <div id="b-concise" class="sub-section" style="display:none;">
+                <div class="card">
+                    <h3>冗長な表現を避ける — Conciseness</h3>
+                    <div class="tip-box">
+                        <strong>原則:</strong> 同じ意味をより少ない語数で表現できるなら、そちらを選びましょう。冗長な文は読み手の集中力を削ぎ、重要な情報が埋もれます（Strunk & White, <em>The Elements of Style</em>, 4th ed., 2000; Williams & Bizup, 2017）。
+                    </div>
+                    <table class="comparison-table">
+                        <tr>
+                            <th class="avoid">冗長（避ける）</th>
+                            <th class="prefer">簡潔（おすすめ）</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">due to the fact that</td>
+                            <td class="prefer">because</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">in order to</td>
+                            <td class="prefer">to</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">a total number of 150 patients</td>
+                            <td class="prefer">150 patients</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">at this point in time</td>
+                            <td class="prefer">currently / now</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">in the event that</td>
+                            <td class="prefer">if</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">it is important to note that</td>
+                            <td class="prefer">notably / importantly（または削除）</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">has the ability to</td>
+                            <td class="prefer">can</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">there are several studies that have shown</td>
+                            <td class="prefer">several studies have shown</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">a sufficient amount of</td>
+                            <td class="prefer">enough / sufficient</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">despite the fact that</td>
+                            <td class="prefer">although / despite</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>冗長を生む構文パターン</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>パターン</th>
+                            <th class="avoid">冗長な例</th>
+                            <th class="prefer">簡潔な例</th>
+                        </tr>
+                        <tr>
+                            <td>It is ... that 構文</td>
+                            <td class="avoid">It is well known that sepsis causes organ dysfunction.</td>
+                            <td class="prefer">Sepsis causes organ dysfunction.</td>
+                        </tr>
+                        <tr>
+                            <td>There is/are 構文</td>
+                            <td class="avoid">There are many factors that contribute to mortality.</td>
+                            <td class="prefer">Many factors contribute to mortality.</td>
+                        </tr>
+                        <tr>
+                            <td>二重否定</td>
+                            <td class="avoid">The results were not inconsistent with...</td>
+                            <td class="prefer">The results were consistent with...</td>
+                        </tr>
+                        <tr>
+                            <td>同義反復（redundancy）</td>
+                            <td class="avoid">past history / end result / future plans / each individual patient</td>
+                            <td class="prefer">history / result / plans / each patient</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Vocabulary Choice -->
+            <div id="b-vocab" class="sub-section" style="display:none;">
+                <div class="card">
+                    <h3>語彙の格 — Register</h3>
+                    <div class="tip-box">
+                        <strong>原則:</strong> 学術文章では日常的な語彙（informal register）よりも、フォーマルな語彙（formal/academic register）を選びます。これは「難しい語を使う」という意味ではなく、正確で曖昧さのない語を選ぶということです（Swales & Feak, <em>Academic Writing for Graduate Students</em>, 4th ed., 2018）。
+                    </p>
+                    </div>
+                    <table class="comparison-table">
+                        <tr>
+                            <th class="avoid">カジュアル / 曖昧（避ける）</th>
+                            <th class="prefer">学術的 / 正確（おすすめ）</th>
+                            <th>備考</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">got better</td>
+                            <td class="prefer">improved</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">went up / went down</td>
+                            <td class="prefer">increased / decreased</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">looked at</td>
+                            <td class="prefer">examined / investigated / evaluated</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">found out</td>
+                            <td class="prefer">determined / identified / ascertained</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">a lot of</td>
+                            <td class="prefer">numerous / many / a substantial number of</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">pretty big</td>
+                            <td class="prefer">substantial / considerable</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">kind of / sort of</td>
+                            <td class="prefer">somewhat / to some extent</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">thing</td>
+                            <td class="prefer">factor / element / variable / component</td>
+                            <td>具体的に何を指すか明示する</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">good / bad</td>
+                            <td class="prefer">favorable / unfavorable / beneficial / detrimental</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>ただし「シンプルで明確」も重要</h3>
+                    <div class="tip-box">
+                        <strong>注意:</strong> フォーマルな語彙を選ぶことと、不必要に難解な語を使うことは異なります。読み手にとって明確であることが最優先です（Day & Gastel, <em>How to Write and Publish a Scientific Paper</em>, 9th ed., 2022）。
+                    </div>
+                    <table class="comparison-table">
+                        <tr>
+                            <th class="avoid">過度に難解（避ける）</th>
+                            <th class="prefer">明確でフォーマル（おすすめ）</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">utilize</td>
+                            <td class="prefer">use（utilize は「特定の目的に活用する」場合のみ）</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">ameliorate</td>
+                            <td class="prefer">improve</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">endeavor</td>
+                            <td class="prefer">attempt / try</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">prior to（前置詞句として多用）</td>
+                            <td class="prefer">before（prior to は名詞句が続く場合に限り可）</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>一人称の使用</h3>
+                    <p style="font-size:0.9rem; color:var(--text); margin-bottom:0.8rem;">
+                        かつて学術論文では一人称（we/I）を避ける慣習がありましたが、現在は多くのジャーナルが能動態での一人称使用を認めています（ICMJE Recommendations; AMA Manual of Style 11th ed.）。
+                    </p>
+                    <table class="comparison-table">
+                        <tr>
+                            <th class="avoid">不自然に一人称を避ける</th>
+                            <th class="prefer">自然な一人称の使用</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">It was hypothesized by the authors that...</td>
+                            <td class="prefer">We hypothesized that...</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">The present investigators performed...</td>
+                            <td class="prefer">We performed...</td>
+                        </tr>
+                    </table>
+                    <div class="phrase-note" style="margin-top:0.5rem;">
+                        Note: 投稿先のジャーナルの Author Guidelines を必ず確認してください。一部のジャーナルでは依然として一人称を避けるスタイルを求める場合があります。
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abbreviations -->
+            <div id="b-abbreviation" class="sub-section" style="display:none;">
+                <div class="card">
+                    <h3>略語の使用ルール</h3>
+                    <div class="tip-box">
+                        <strong>原則:</strong> 学術文書では、初出時に正式名称を記載し、括弧内に略語を定義してから使用します。タイトルには原則として略語を使用しません（AMA Manual of Style, 11th ed.; ICMJE Recommendations）。
+                    </div>
+                    <div class="phrase-item">
+                        <div class="phrase-en"><strong>基本ルール:</strong> 初出で定義 → 以降は略語を使用</div>
+                        <div class="phrase-ja">例：We measured the Glasgow Coma Scale (GCS) score on arrival. The median GCS was 12.</div>
+                    </div>
+                    <div class="phrase-item">
+                        <div class="phrase-en"><strong>例外:</strong> 広く認知された略語は定義なしで使用可能</div>
+                        <div class="phrase-ja">例：DNA, RNA, ICU, CT, MRI, ECG/EKG, CPR, IV, HIV, COVID-19（ジャーナルにより異なる）</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>略語に関する注意点</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>ルール</th>
+                            <th>説明</th>
+                        </tr>
+                        <tr>
+                            <td class="prefer">タイトルには略語を使わない</td>
+                            <td>検索性が下がり、読者が略語を知らない可能性がある。Abstract内で使う場合はAbstract内でも初出定義が必要</td>
+                        </tr>
+                        <tr>
+                            <td class="prefer">3回以上使う場合のみ略語を定義する</td>
+                            <td>1〜2回しか出てこない用語を略語化すると、かえって読みにくくなる</td>
+                        </tr>
+                        <tr>
+                            <td class="prefer">略語を使いすぎない</td>
+                            <td>1つの文に略語が3つ以上並ぶと読みにくい。読者の負担を考慮する</td>
+                        </tr>
+                        <tr>
+                            <td class="prefer">Abstractと本文は独立</td>
+                            <td>Abstractで定義した略語も、本文の初出で再度定義する（多くのジャーナルで必須）</td>
+                        </tr>
+                        <tr>
+                            <td class="prefer">文頭は略語で始めない</td>
+                            <td>"GCS was measured" ではなく "The GCS was measured" または "Glasgow Coma Scale score was measured"</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>避けるべき略語の使い方</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th class="avoid">避ける</th>
+                            <th class="prefer">おすすめ</th>
+                            <th>理由</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">etc.</td>
+                            <td class="prefer">and others / among others / including</td>
+                            <td>曖昧。具体的に列挙するか、"such as A, B, and C" とする</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">e.g. / i.e.（本文中）</td>
+                            <td class="prefer">for example / that is</td>
+                            <td>括弧内では使用可だが、本文中ではスペルアウトするのがフォーマル（AMA Manual of Style）</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">vs（本文中）</td>
+                            <td class="prefer">versus / compared with</td>
+                            <td>表や図では "vs" 可だが、本文ではスペルアウトする</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">don't / can't / it's</td>
+                            <td class="prefer">do not / cannot / it is</td>
+                            <td>学術文では短縮形を使わない</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Numbers and Units -->
+            <div id="b-number" class="sub-section" style="display:none;">
+                <div class="card">
+                    <h3>数字の表記ルール</h3>
+                    <div class="tip-box">
+                        <strong>基本原則:</strong> 文頭の数字はスペルアウトし、10以上の数字はアラビア数字で記載します（AMA Manual of Style, 11th ed.）。ただしジャーナルにより基準が異なる場合があります。
+                    </div>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>ルール</th>
+                            <th>例</th>
+                        </tr>
+                        <tr>
+                            <td>文頭の数字はスペルアウト</td>
+                            <td class="prefer"><strong>Fifteen</strong> patients were excluded. （"15 patients" で始めない）</td>
+                        </tr>
+                        <tr>
+                            <td>10以上はアラビア数字</td>
+                            <td class="prefer">We enrolled <strong>250</strong> patients over <strong>12</strong> months.</td>
+                        </tr>
+                        <tr>
+                            <td>10未満はスペルアウト（AMA式）</td>
+                            <td class="prefer">The procedure was repeated <strong>three</strong> times. ただし単位が付く場合は数字："<strong>5</strong> mg"</td>
+                        </tr>
+                        <tr>
+                            <td>単位の前はアラビア数字</td>
+                            <td class="prefer"><strong>3</strong> mL, <strong>7</strong> days, <strong>2</strong> hours</td>
+                        </tr>
+                        <tr>
+                            <td>割合・統計値はアラビア数字</td>
+                            <td class="prefer">Mortality was <strong>23%</strong> (P = <strong>0.003</strong>).</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>単位の表記</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>ルール</th>
+                            <th>例</th>
+                        </tr>
+                        <tr>
+                            <td>SI単位を使用する</td>
+                            <td class="prefer">mmHg, mL, kg, mmol/L（ジャーナルにより conventional units を併記する場合もある）</td>
+                        </tr>
+                        <tr>
+                            <td>単位にピリオドを付けない</td>
+                            <td class="prefer">mg（mg. ではない）、mL（mL. ではない）</td>
+                        </tr>
+                        <tr>
+                            <td>数字と単位の間にスペース</td>
+                            <td class="prefer">5 mg（5mg ではない）。ただし % はスペースなし "23%"（AMA式）</td>
+                        </tr>
+                        <tr>
+                            <td>温度の表記</td>
+                            <td class="prefer">38.5°C（°Cの前にスペースなし）</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- ==================== WRITING SECTION ==================== -->
         <div id="writing" class="section active">
             <div class="section-header">
@@ -503,7 +1063,7 @@
                             <ul>
                                 <li>簡潔で研究内容を正確に反映</li>
                                 <li>Structured Abstract: Background, Methods, Results, Conclusions</li>
-                                <li>250語以内が一般的</li>
+                                <li>語数制限はジャーナルにより異なる（Author Guidelinesを確認）</li>
                             </ul>
                         </div>
                     </div>
@@ -527,7 +1087,6 @@
                                 <li>データ収集方法</li>
                                 <li>統計解析方法</li>
                                 <li>倫理審査の記載（ヘルシンキ宣言 / 各施設IRB）</li>
-                                <li>報告ガイドライン：RCTはCONSORT、観察研究はSTROBE、SRはPRISMA（EQUATOR Network推奨）</li>
                             </ul>
                         </div>
                     </div>
@@ -565,6 +1124,51 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+
+                <div class="card">
+                    <h3>報告ガイドライン — Reporting Guidelines</h3>
+                    <p style="font-size:0.9rem; color:var(--text); margin-bottom:0.8rem;">
+                        投稿する雑誌の投稿規程（Author Guidelines）を熟読するのはもちろんですが、研究デザインに応じた報告ガイドラインを参照して執筆すると、論文の質と透明性が大きく向上します。EQUATOR Network（Enhancing the QUAlity and Transparency Of health Research）が各研究デザインに対応するガイドラインを網羅的にまとめています。
+                    </p>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>研究デザイン</th>
+                            <th>報告ガイドライン</th>
+                        </tr>
+                        <tr>
+                            <td>ランダム化比較試験（RCT）</td>
+                            <td class="prefer">CONSORT (Consolidated Standards of Reporting Trials)</td>
+                        </tr>
+                        <tr>
+                            <td>観察研究（コホート・症例対照・横断）</td>
+                            <td class="prefer">STROBE (Strengthening the Reporting of Observational Studies in Epidemiology)</td>
+                        </tr>
+                        <tr>
+                            <td>系統的レビュー・メタ解析</td>
+                            <td class="prefer">PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses)</td>
+                        </tr>
+                        <tr>
+                            <td>診断精度研究</td>
+                            <td class="prefer">STARD (Standards for Reporting of Diagnostic Accuracy Studies)</td>
+                        </tr>
+                        <tr>
+                            <td>症例報告</td>
+                            <td class="prefer">CARE (CAse REport)</td>
+                        </tr>
+                        <tr>
+                            <td>質的研究</td>
+                            <td class="prefer">SRQR (Standards for Reporting Qualitative Research)</td>
+                        </tr>
+                        <tr>
+                            <td>動物実験</td>
+                            <td class="prefer">ARRIVE (Animal Research: Reporting of In Vivo Experiments)</td>
+                        </tr>
+                    </table>
+                    <p style="font-size:0.88rem; color:var(--text); margin-top:0.8rem;">
+                        その他の研究デザインに対応するガイドラインも含め、以下のサイトで検索できます：<br>
+                        <strong>EQUATOR Network:</strong> <span style="color:var(--primary-light);">https://www.equator-network.org/reporting-guidelines/</span>
+                    </p>
                 </div>
             </div>
 
@@ -679,9 +1283,12 @@
                 </div>
                 <div class="card">
                     <h3>研究目的の明示</h3>
+                    <div class="tip-box">
+                        <strong>PICO/PECO:</strong> Introductionの最後に述べる研究目的は、PICO（Patient, Intervention, Comparison, Outcome）またはPECO（Patient, Exposure, Comparison, Outcome）が読み手に明確に伝わるように記載することが多いです。
+                    </div>
                     <div class="phrase-item">
-                        <div class="phrase-en">The aim of this study was to investigate...</div>
-                        <div class="phrase-ja">本研究の目的は…を調査することであった。</div>
+                        <div class="phrase-en">The aim of this study was to investigate whether [Intervention] compared with [Comparison] reduces [Outcome] in [Patient population].</div>
+                        <div class="phrase-ja">本研究の目的は、[患者集団]において[介入]が[比較対照]と比較して[転帰]を減少させるかどうかを調査することであった。</div>
                     </div>
                     <div class="phrase-item">
                         <div class="phrase-en">We hypothesized that [intervention] would reduce [outcome].</div>
@@ -690,6 +1297,10 @@
                     <div class="phrase-item">
                         <div class="phrase-en">Therefore, we conducted a [study design] to determine whether...</div>
                         <div class="phrase-ja">したがって、…かどうかを明らかにするために[研究デザイン]を実施した。</div>
+                    </div>
+                    <div class="phrase-item">
+                        <div class="phrase-en">We sought to examine the association between [Exposure] and [Outcome] among [Patient population].</div>
+                        <div class="phrase-ja">[患者集団]における[曝露因子]と[転帰]の関連を検討することを目的とした。</div>
                     </div>
                 </div>
             </div>
@@ -2075,6 +2686,7 @@
                 <button class="sub-nav-btn" data-sub="v-stats">統計用語</button>
                 <button class="sub-nav-btn" data-sub="v-transition">接続表現</button>
                 <button class="sub-nav-btn" data-sub="v-formal">形式的表現</button>
+                <button class="sub-nav-btn" data-sub="v-wasei">和製英語に注意</button>
             </div>
 
             <div id="v-study" class="sub-section active">
@@ -2232,6 +2844,308 @@
                         <div class="phrase-en">The changes are highlighted in yellow in the revised manuscript (page X, line Y).</div>
                         <div class="phrase-ja">変更箇所は修正原稿において黄色でハイライトしています（X頁、Y行）。</div>
                     </div>
+                </div>
+            </div>
+
+            <div id="v-wasei" class="sub-section" style="display:none;">
+                <div class="tip-box">
+                    <strong>注意:</strong> 日本の医療現場ではドイツ語由来の用語や和製英語が日常的に使われていますが、国際学会や英語論文ではまったく通じないか、誤解を招くことがあります。発表や執筆の前に必ず確認しましょう。
+                </div>
+
+                <div class="card">
+                    <h3>和製英語・日本独自の医療用語 <span class="badge">要注意</span></h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>日本で使われる表現</th>
+                            <th>国際的に正しい英語</th>
+                            <th>解説</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">ショックバイタル</td>
+                            <td class="prefer">hemodynamically unstable / hypotensive and tachycardic</td>
+                            <td>"shock vitals" は英語として存在しない。バイタルサインの異常を具体的に述べる</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">peak out（した）</td>
+                            <td class="prefer">peaked / plateaued and subsequently declined</td>
+                            <td>"peak out" は和製英語。英語では peaked（頂点に達した）を使う</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">ルンバール</td>
+                            <td class="prefer">lumbar puncture (LP)</td>
+                            <td>ドイツ語 Lumbalpunktion 由来。英語では lumbar puncture または spinal tap</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">プレショック</td>
+                            <td class="prefer">impending shock / compensated shock</td>
+                            <td>"pre-shock" は英語表現でも時に見られるが標準的ではない。compensated shock（代償性ショック）や impending shock がおすすめです</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">アンビューバッグ</td>
+                            <td class="prefer">bag-valve-mask (BVM) / Ambu bag</td>
+                            <td>Ambu は企業名（Ambu A/S）で、欧米でも "Ambu bag" で通じることが多い。ただし学術論文では一般名称の bag-valve-mask (BVM) を使用する</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">サチュレーション</td>
+                            <td class="prefer">oxygen saturation (SpO2)</td>
+                            <td>"saturation" 単独では何の飽和度か不明。SpO2 または oxygen saturation と明示する</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">バイタル（が悪い）</td>
+                            <td class="prefer">vital signs / hemodynamically unstable</td>
+                            <td>"vitals" は口語では使うが、学術的には vital signs。「悪い」は具体的数値で述べる</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>ドイツ語由来の医療用語</h3>
+                    <div class="tip-box">
+                        <strong>歴史的背景:</strong> 日本の近代医学はドイツ医学を基盤に発展したため、現在も多くのドイツ語由来の用語が臨床現場で使われています。英語圏ではこれらはまったく通じません。
+                    </div>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>日本で使われる表現（独語由来）</th>
+                            <th>国際的に正しい英語</th>
+                            <th>語源</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">カルテ</td>
+                            <td class="prefer">medical record / chart</td>
+                            <td>独 Karte</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">オペ</td>
+                            <td class="prefer">surgery / operation</td>
+                            <td>独 Operation</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">ナート</td>
+                            <td class="prefer">suture / suturing</td>
+                            <td>独 Naht</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">マーゲンチューブ / マーゲンゾンデ</td>
+                            <td class="prefer">nasogastric tube (NG tube)</td>
+                            <td>独 Magensonde</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">ギプス</td>
+                            <td class="prefer">cast / plaster cast</td>
+                            <td>独 Gips</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">コッヘル</td>
+                            <td class="prefer">hemostat / hemostatic forceps</td>
+                            <td>独 Kocher（人名由来）</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">クレンメ</td>
+                            <td class="prefer">clamp</td>
+                            <td>独 Klemme</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">ムンテラ</td>
+                            <td class="prefer">informed consent discussion / counseling</td>
+                            <td>独 Mundtherapie（造語）</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">ステルベン / ステる</td>
+                            <td class="prefer">died / expired / death occurred</td>
+                            <td>独 sterben（死ぬ）</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">アッペ</td>
+                            <td class="prefer">appendicitis</td>
+                            <td>独 Appendizitis の略</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>日本で通じるが国際的には異なる略語・用語</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>日本での使い方</th>
+                            <th>国際的に正しい表現</th>
+                            <th>解説</th>
+                        </tr>
+                        <tr>
+                            <td class="avoid">CPA（心肺停止）</td>
+                            <td class="prefer">cardiac arrest / OHCA / IHCA</td>
+                            <td>CPA (cardiopulmonary arrest) は英語文献でも見られるがやや古い表現で、欧米では通じにくい。現在は cardiac arrest が標準。院外はOHCA、院内はIHCA</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">BS（血糖値）</td>
+                            <td class="prefer">blood glucose (BG) / plasma glucose</td>
+                            <td>英語圏で BS は bowel sounds の略語。血糖は blood glucose が標準</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">DIV（点滴静注）</td>
+                            <td class="prefer">IV infusion / intravenous drip</td>
+                            <td>DIV（drip infusion via vein）は日本独自の略語。英語では IV infusion</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">IC（インフォームドコンセント）</td>
+                            <td class="prefer">informed consent / informed consent discussion</td>
+                            <td>IC は国際的には略語として一般的ではない。省略せずに書く</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">レントゲン</td>
+                            <td class="prefer">X-ray / radiograph / plain film</td>
+                            <td>人名由来。英語では X-ray が標準。論文では radiograph を使用</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">エコー（超音波検査全般の意味で）</td>
+                            <td class="prefer">ultrasound / ultrasonography / echocardiography</td>
+                            <td>北米では "echo" は echocardiography（心エコー）を指すため、腹部エコー等の意味で使うと誤解される。超音波検査全般は ultrasound / ultrasonography、心臓に限定する場合は echocardiography を使用</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">ドクターヘリ</td>
+                            <td class="prefer">physician-staffed helicopter / HEMS (helicopter emergency medical service)</td>
+                            <td>「ドクターヘリ」は日本独自の用語。機体を指す場合は physician-staffed helicopter、システム名称としては HEMS を使用</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">ドクターカー</td>
+                            <td class="prefer">physician-staffed ambulance</td>
+                            <td>「ドクターカー」は日本独自の用語。英語では physician-staffed ambulance が適切</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">ドレナージ</td>
+                            <td class="prefer">drainage</td>
+                            <td>フランス語由来の発音。英語では drainage [ˈdreɪnɪdʒ] と発音</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">トリアージ</td>
+                            <td class="prefer">triage [triˈɑːʒ]</td>
+                            <td>用語自体は正しいが、発音に注意。日本語の「トリアージ」とは異なる</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">エピ（エピネフリンの略）</td>
+                            <td class="prefer">epinephrine / adrenaline</td>
+                            <td>口語では "epi" も使われるが、学術発表では省略せず epinephrine（米）/ adrenaline（英）</td>
+                        </tr>
+                        <tr>
+                            <td class="avoid">副作用</td>
+                            <td class="prefer">adverse effect / adverse event（学術的）</td>
+                            <td>日本語「副作用」は side effect と訳しがちだが、学術論文では adverse effect / adverse event が標準</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>職位・役割の表現</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>日本での呼称</th>
+                            <th>北米英語</th>
+                            <th>英国英語</th>
+                        </tr>
+                        <tr>
+                            <td>研修医（初期）</td>
+                            <td class="prefer">resident / junior resident / PGY-1</td>
+                            <td>foundation doctor (FY1/FY2)</td>
+                        </tr>
+                        <tr>
+                            <td>専攻医（後期研修医）</td>
+                            <td class="prefer">resident</td>
+                            <td>registrar / specialty trainee (ST)</td>
+                        </tr>
+                        <tr>
+                            <td>指導医 / 上級医</td>
+                            <td class="prefer">attending physician</td>
+                            <td>consultant</td>
+                        </tr>
+                        <tr>
+                            <td>救命士</td>
+                            <td class="prefer">paramedic / EMT</td>
+                            <td>paramedic</td>
+                        </tr>
+                        <tr>
+                            <td>当直医</td>
+                            <td class="prefer">on-call physician</td>
+                            <td>on-call doctor / duty doctor</td>
+                        </tr>
+                        <tr>
+                            <td>主治医</td>
+                            <td class="prefer">attending physician / primary physician</td>
+                            <td>consultant in charge / named consultant</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>発音に注意が必要な医学用語</h3>
+                    <div class="tip-box">
+                        <strong>Tip:</strong> 学会発表では正しい発音も重要です。日本語のカタカナ読みとは大きく異なる用語があります。
+                    </div>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>用語</th>
+                            <th>日本語読み</th>
+                            <th>英語発音（近似）</th>
+                        </tr>
+                        <tr>
+                            <td>catheter</td>
+                            <td>カテーテル</td>
+                            <td class="prefer">キャシター [ˈkæθɪtər]</td>
+                        </tr>
+                        <tr>
+                            <td>triage</td>
+                            <td>トリアージ</td>
+                            <td class="prefer">トリアージュ [triˈɑːʒ]</td>
+                        </tr>
+                        <tr>
+                            <td>angina</td>
+                            <td>アンギナ</td>
+                            <td class="prefer">アンジャイナ [ænˈdʒaɪnə]</td>
+                        </tr>
+                        <tr>
+                            <td>vaccine</td>
+                            <td>ワクチン</td>
+                            <td class="prefer">ヴァクスィーン [vækˈsiːn]</td>
+                        </tr>
+                        <tr>
+                            <td>virus</td>
+                            <td>ウイルス</td>
+                            <td class="prefer">ヴァイラス [ˈvaɪrəs]</td>
+                        </tr>
+                        <tr>
+                            <td>allergy</td>
+                            <td>アレルギー</td>
+                            <td class="prefer">アラジー [ˈælərdʒi]</td>
+                        </tr>
+                        <tr>
+                            <td>analgesic</td>
+                            <td>アナルゲジック</td>
+                            <td class="prefer">アナルジーズィック [ˌænəlˈdʒiːzɪk]</td>
+                        </tr>
+                        <tr>
+                            <td>aorta</td>
+                            <td>アオルタ</td>
+                            <td class="prefer">エイオータ [eɪˈɔːrtə]</td>
+                        </tr>
+                        <tr>
+                            <td>ischemia</td>
+                            <td>イスケミア</td>
+                            <td class="prefer">イスキーミア [ɪˈskiːmiə]</td>
+                        </tr>
+                        <tr>
+                            <td>asystole</td>
+                            <td>エイシストールと誤読されやすい</td>
+                            <td class="prefer">エイスィストリー [eɪˈsɪstəli]</td>
+                        </tr>
+                        <tr>
+                            <td>Xylocaine (lidocaine)</td>
+                            <td>キシロカイン</td>
+                            <td class="prefer">ザイロケイン [ˈzaɪləkeɪn]</td>
+                        </tr>
+                        <tr>
+                            <td>Lasix (furosemide)</td>
+                            <td>ラシックス</td>
+                            <td class="prefer">レイスィックス [ˈleɪsɪks]</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -2680,6 +3594,10 @@
             </div>
             <p style="font-size:0.8rem; color:var(--text-light); margin-top:1rem; border-top:1px solid var(--border); padding-top:0.8rem;">
                 本教材は教育目的で作成されたオリジナルコンテンツです。症例・データはすべて架空のものであり、実在の患者情報は含まれていません。上記の文献・ガイドラインの名称・概念への言及は、事実の報告および教育目的の参照（fair use / fair dealing）に該当します。
+                <br><br>
+                <strong>Author:</strong> Shunichiro Nakao, MD, MSc, PhD<br>
+                Department of Traumatology and Acute Critical Medicine, The University of Osaka<br>
+                本教材の作成にあたり、生成AI（Claude, Anthropic）を活用しました。
             </p>
         </div>
     </footer>
