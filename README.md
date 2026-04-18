@@ -2,10 +2,6 @@
 
 医学論文執筆・学会発表のための学術英語教材（Web App）
 
-**Author:**  
-Shunichiro Nakao, MD, MSc, PhD  
-Department of Traumatology and Acute Critical Medicine, The University of Osaka
-
 ## Overview
 
 医学研究者・臨床医が学術英語を体系的に学ぶためのインタラクティブなウェブ教材です。論文執筆（IMRaD形式）から学会発表、救急医のプレゼンテーションまで幅広くカバーしています。
@@ -42,7 +38,7 @@ open index.html
 academic-english/
 ├── index.html    # アプリ本体（HTML/CSS/JS 単一ファイル）
 ├── README.md     # このファイル
-└── LICENSE       # MIT License
+└── LICENSE       # CC BY-NC-ND 4.0
 ```
 
 ## Technology
@@ -81,4 +77,13 @@ Issue や Pull Request を歓迎します。
 
 ## License
 
-[MIT License](LICENSE)
+© 2026 Shunichiro Nakao. Licensed under [CC BY-NC-ND 4.0](LICENSE).
+
+Creative Commons 表示-非営利-改変禁止 4.0 国際ライセンス。教育目的での利用・共有は自由です。改変および商用利用はできません。
+
+詳細: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ja
+
+## Author
+
+Shunichiro Nakao, MD, MSc, PhD  
+Department of Traumatology and Acute Critical Medicine, The University of Osaka
