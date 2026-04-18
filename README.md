@@ -1,9 +1,9 @@
-# Medical Academic English
+# Medical Academic English Trainer
 
 医学論文執筆・学会発表のための学術英語教材（Web App）
 
-**Author:**
-Shunichiro Nakao, MD, MSc, PhD
+**Author:**  
+Shunichiro Nakao, MD, MSc, PhD  
 Department of Traumatology and Acute Critical Medicine, The University of Osaka
 
 ## Overview
